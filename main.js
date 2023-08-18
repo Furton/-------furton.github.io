@@ -1,16 +1,5 @@
 vkBridge.send('VKWebAppInit');
 
-bridge.send('VKWebAppShowNativeAds', {
-    ad_format: 'interstitial' /* Тип рекламы */
-})
-    .then((data) => {
-        if (data.result) {
-            // Реклама была показана
-        } else {
-            // Ошибка
-        }
-    })
-    .catch((error) => { console.log(error); });
 
 const designWidth = 2000;
 const designHeight = (9 / 16) * designWidth;
@@ -49,3 +38,17 @@ document.body.appendChild(app.view);
 
 var element = document.getElementById("ld");
 element.remove();
+
+console.log('start');
+bridge.send('VKWebAppShowNativeAds', {
+    ad_format: 'interstitial' /* Тип рекламы */
+})
+    .then((data) => {
+        if (data.result) {
+            console.log('show');
+        } else {
+            console.log('error');
+        }
+    })
+    .catch((error) => { console.log(error); });
+
