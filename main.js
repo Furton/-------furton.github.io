@@ -29,17 +29,26 @@ if (window.devicePixelRatio > 1) {
 const app = new PIXI.Application(
     {
         resizeTo: window,
-        //background: '#1099bb',
-        background: '#000000',
+        background: '#1099bb',
         autoDensity: true,
         antialias: true,
         resolution: myRes
     });
 document.body.appendChild(app.view);
 
-var element = document.getElementById("ld");
-element.remove();
+//var element = document.getElementById("ld");
+//element.remove();
 
 window.console.log('start');
+
+
+bridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })
+    .then((data) => {
+        if (data.result)
+            window.console.log('show');
+        else
+            window.console.log('error');
+    })
+    .catch((error) => { console.log(error);});
 
 
