@@ -39,16 +39,6 @@ document.body.appendChild(app.view);
 var element = document.getElementById("ld");
 element.remove();
 
-console.log('start');
-bridge.send('VKWebAppShowNativeAds', {
-    ad_format: 'interstitial' /* Тип рекламы */
-})
-    .then((data) => {
-        if (data.result) {
-            console.log('show');
-        } else {
-            console.log('error');
-        }
-    })
-    .catch((error) => { console.log(error); });
+window.console.log('start');
+
 
