@@ -29,7 +29,8 @@ if (window.devicePixelRatio > 1) {
 const app = new PIXI.Application(
     {
         resizeTo: window,
-        background: '#1099bb',
+        //background: '#1099bb',
+        background: '#000000',
         autoDensity: true,
         antialias: true,
         resolution: myRes
