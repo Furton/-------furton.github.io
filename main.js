@@ -42,7 +42,7 @@ document.body.appendChild(app.view);
 window.console.log('start');
 
 
-bridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })
+vkBridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })
     .then((data) => {
         if (data.result)
             window.console.log('show');
@@ -51,7 +51,7 @@ bridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })
     })
     .catch((error) => { console.log(error);});
 
-bridge.send('VKWebAppShowBannerAd', {
+vkBridge.send('VKWebAppShowBannerAd', {
     banner_location: 'bottom',
     layout_type: 'resize'
 })
