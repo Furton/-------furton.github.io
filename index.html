@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -18,7 +19,7 @@
         }
 
         .loader {
-            width:  30vw;
+            width: 30vw;
             height: 30vw;
             border: 4vw solid #FFF;
             border-bottom-color: #FF3D00;
@@ -28,6 +29,7 @@
             animation: rotation 2s linear infinite;
             position: absolute;
         }
+
         @keyframes rotation {
             0% {
                 transform: rotate(0deg);
@@ -37,7 +39,7 @@
                 transform: rotate(360deg);
             }
         }
-    </style>    
+    </style>
 </head>
 <body>
     <div id="ld" , class="loader"></div>

@@ -1,3 +1,17 @@
+vkBridge.send('VKWebAppInit');
+
+bridge.send('VKWebAppShowNativeAds', {
+    ad_format: 'interstitial' /* Тип рекламы */
+})
+    .then((data) => {
+        if (data.result) {
+            // Реклама была показана
+        } else {
+            // Ошибка
+        }
+    })
+    .catch((error) => { console.log(error); });
+
 const designWidth = 2000;
 const designHeight = (9 / 16) * designWidth;
 
